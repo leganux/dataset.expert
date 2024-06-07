@@ -1,0 +1,29 @@
+{
+    "name": "",
+    "shortName": "",
+    "id": "DSE:custom:customEmpty",
+    "description": "",
+    "type": {
+        "Degree": {
+            "id": "DSE:0.0.0:angle:deg",
+            "name": "degree",
+            "shortName": "°",
+            "description": "The degree is a unit of angle measurement, where a full circle is divided into 360 equal parts.",
+            "iso": "°",
+            "range": {
+                "min": 0,
+                "max": 360
+            },
+            "nullable": false,
+            "negative": false,
+            "infinite": false,
+            "type": "numeric",
+            "decimals": 2,
+            "preffix": false,
+            "suffix": "°",
+            "multipliers": false,
+            "submultipliers": false
+        }
+    },
+    "converts": false
+}

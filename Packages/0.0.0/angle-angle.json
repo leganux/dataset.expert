@@ -1,0 +1,88 @@
+{
+    "name": "angle",
+    "shortName": "angle",
+    "id": "DSE:0.0.0:angle",
+    "description": "Angle is a measure of rotation between two rays sharing a common endpoint. Common units for measuring angles include degrees (°), radians (rad), and arcminutes (arcmin).",
+    "type": {
+        "Degree": {
+            "id": "DSE:0.0.0:angle:deg",
+            "name": "degree",
+            "shortName": "°",
+            "description": "The degree is a unit of angle measurement, where a full circle is divided into 360 equal parts.",
+            "iso": "°",
+            "range": {
+                "min": 0,
+                "max": 360
+            },
+            "nullable": false,
+            "negative": false,
+            "infinite": false,
+            "type": "numeric",
+            "decimals": 2,
+            "preffix": false,
+            "suffix": "°",
+            "multipliers": false,
+            "submultipliers": false
+        },
+        "Radian": {
+            "id": "DSE:0.0.0:angle:rad",
+            "name": "radian",
+            "shortName": "rad",
+            "description": "The radian is a unit of angle measurement, defined as the angle subtended at the center of a circle by an arc that is equal in length to the radius of the circle.",
+            "iso": "rad",
+            "range": {
+                "min": 0,
+                "max": 6.28319
+            },
+            "nullable": false,
+            "negative": false,
+            "infinite": false,
+            "type": "numeric",
+            "decimals": 6,
+            "preffix": false,
+            "suffix": " rad",
+            "multipliers": false,
+            "submultipliers": false
+        },
+        "Arcminute": {
+            "id": "DSE:0.0.0:angle:arcmin",
+            "name": "arcminute",
+            "shortName": "arcmin",
+            "description": "The arcminute is a unit of angular measurement equal to one-sixtieth (1/60) of one degree.",
+            "iso": "arcmin",
+            "range": {
+                "min": 0,
+                "max": 3600
+            },
+            "nullable": false,
+            "negative": false,
+            "infinite": false,
+            "type": "numeric",
+            "decimals": 2,
+            "preffix": false,
+            "suffix": " arcmin",
+            "multipliers": false,
+            "submultipliers": false
+        }
+    },
+    "converts": {
+        "Degree": {
+            "toRadian": "{{_X_}} * (pi / 180)",
+            "fromRadian": "{{_X_}} * (180 / pi)",
+            "toArcminute": "{{_X_}} * 60",
+            "fromArcminute": "{{_X_}} / 60"
+        },
+        "Radian": {
+            "toDegree": "{{_X_}} * (180 / pi)",
+            "fromDegree": "{{_X_}} * (pi / 180)",
+            "toArcminute": "{{_X_}} * (180 * 60 / pi)",
+            "fromArcminute": "{{_X_}} * (pi / (180 * 60))"
+        },
+        "Arcminute": {
+            "toDegree": "{{_X_}} / 60",
+            "fromDegree": "{{_X_}} * 60",
+            "toRadian": "{{_X_}} * (pi / (180 * 60))",
+            "fromRadian": "{{_X_}} * (180 * 60 / pi)"
+        }
+    }
+}

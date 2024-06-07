@@ -1,0 +1,77 @@
+{
+    "name": "person",
+    "shortName": "person",
+    "id": "DSE:0.0.0:person",
+    "description": "Defines attributes related to a person.",
+    "type": {
+        "Name": {
+            "id": "DSE:0.0.0:person:name",
+            "name": "Name",
+            "shortName": "name",
+            "description": "The person's name.",
+            "type": "string",
+            "nullable": false,
+            "transform": "capitalize"
+        },
+        "LastName": {
+            "id": "DSE:0.0.0:person:lastName",
+            "name": "Last Name",
+            "shortName": "last name",
+            "description": "The person's last name.",
+            "type": "string",
+            "nullable": false,
+            "transform": "capitalize"
+        },
+        "Email": {
+            "id": "DSE:0.0.0:person:email",
+            "name": "Email",
+            "shortName": "email",
+            "description": "The person's email address.",
+            "type": "string",
+            "nullable": true,
+            "pattern": "^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$"
+        },
+        "Phone": {
+            "id": "DSE:0.0.0:person:phone",
+            "name": "Phone",
+            "shortName": "phone",
+            "description": "The person's phone number.",
+            "type": "string",
+            "nullable": true,
+            "pattern": "^[0-9]{10}$"
+        },
+        "Address": {
+            "id": "DSE:0.0.0:person:address",
+            "name": "Address",
+            "shortName": "address",
+            "description": "The person's address.",
+            "type": "string",
+            "nullable": true
+        },
+        "BirthDate": {
+            "id": "DSE:0.0.0:person:birthDate",
+            "name": "Birth Date",
+            "shortName": "birth date",
+            "description": "The person's date of birth in the format YYYY-MM-DD.",
+            "type": "string",
+            "nullable": true,
+            "format": "date",
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+        },
+        "Gender": {
+            "id": "DSE:0.0.0:person:gender",
+            "name": "Gender",
+            "shortName": "gender",
+            "description": "The person's gender.",
+            "type": "enum",
+            "nullable": true,
+            "values": [
+                "male",
+                "female",
+                "undefined"
+            ],
+            "defaultValue": "undefined"
+        }
+    },
+    "converts": false
+}

@@ -1,0 +1,88 @@
+{
+    "name": "temperature",
+    "shortName": "temp",
+    "id": "DSE:0.0.0:temp",
+    "description": "Temperature is a measure of the warmth or coldness of an object or substance with reference to a standard value. It is typically measured in degrees Celsius (°C), Fahrenheit (°F), or Kelvin (K).",
+    "type": {
+        "Kelvin": {
+            "id": "DSE:0.0.0:temp:K",
+            "name": "kelvin",
+            "shortName": "K",
+            "description": "The Kelvin scale is an absolute temperature scale, starting at absolute zero, the point where all thermal movement ceases. On this scale, 0 K is absolute zero and 273.15 K is the freezing point of water. No grades are used on this scale.",
+            "iso": "K",
+            "range": {
+                "min": 0,
+                "max": 273.15
+            },
+            "nullable": false,
+            "negative": false,
+            "infinite": false,
+            "type": "numeric",
+            "decimals": 5,
+            "preffix": false,
+            "suffix": " K",
+            "multipliers": false,
+            "submultipliers": false
+        },
+        "Celsius": {
+            "id": "DSE:0.0.0:temp:C",
+            "name": "celsius",
+            "shortName": "C",
+            "description": "The Celsius scale, also known as the centigrade scale, is a temperature scale where 0 °C is the freezing point of water and 100 °C is the boiling point of water at standard atmospheric pressure.",
+            "iso": "°C",
+            "range": {
+                "min": -273.15,
+                "max": 100
+            },
+            "nullable": false,
+            "negative": true,
+            "infinite": false,
+            "type": "numeric",
+            "decimals": 2,
+            "preffix": false,
+            "suffix": " °C",
+            "multipliers": false,
+            "submultipliers": false
+        },
+        "Fahrenheit": {
+            "id": "DSE:0.0.0:temp:F",
+            "name": "fahrenheit",
+            "shortName": "F",
+            "description": "The Fahrenheit scale is a temperature scale where 32 °F is the freezing point of water and 212 °F is the boiling point of water at standard atmospheric pressure.",
+            "iso": "°F",
+            "range": {
+                "min": -459.67,
+                "max": 212
+            },
+            "nullable": false,
+            "negative": true,
+            "infinite": false,
+            "type": "numeric",
+            "decimals": 2,
+            "preffix": false,
+            "suffix": " °F",
+            "multipliers": false,
+            "submultipliers": false
+        }
+    },
+    "converts": {
+        "Celsius": {
+            "toKelvin": "{{_X_}} + 273.15",
+            "fromKelvin": "{{_X_}} - 273.15",
+            "toFahrenheit": "({{_X_}} * 9/5) + 32",
+            "fromFahrenheit": "({{_X_}} - 32) * 5/9"
+        },
+        "Fahrenheit": {
+            "toKelvin": "({{_X_}} + 459.67) * 5/9",
+            "fromKelvin": "({{_X_}} * 9/5) - 459.67",
+            "toCelsius": "({{_X_}} - 32) * 5/9",
+            "fromCelsius": "({{_X_}} * 9/5) + 32"
+        },
+        "Kelvin": {
+            "toCelsius": "{{_X_}} - 273.15",
+            "fromCelsius": "{{_X_}} + 273.15",
+            "toFahrenheit": "({{_X_}} * 9/5) - 459.67",
+            "fromFahrenheit": "({{_X_}} + 459.67) * 5/9"
+        }
+    }
+}

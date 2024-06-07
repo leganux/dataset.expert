@@ -1,0 +1,88 @@
+{
+    "name": "weight",
+    "shortName": "weight",
+    "id": "DSE:0.0.0:weight",
+    "description": "Weight is the force exerted on an object due to gravity. It is typically measured in units such as grams (g), pounds (lb), or newtons (N).",
+    "type": {
+        "Gram": {
+            "id": "DSE:0.0.0:weight:g",
+            "name": "gram",
+            "shortName": "g",
+            "description": "The gram is the base unit of mass in the International System of Units (SI). It is equal to one thousandth of a kilogram.",
+            "iso": "g",
+            "range": {
+                "min": 0,
+                "max": false
+            },
+            "nullable": false,
+            "negative": false,
+            "infinite": false,
+            "type": "numeric",
+            "decimals": 2,
+            "preffix": false,
+            "suffix": " g",
+            "multipliers": true,
+            "submultipliers": true
+        },
+        "Pound": {
+            "id": "DSE:0.0.0:weight:lb",
+            "name": "pound",
+            "shortName": "lb",
+            "description": "The pound is a unit of mass or weight in a number of different systems, including English units, Imperial units, and United States customary units. Its size can vary from system to system.",
+            "iso": "lb",
+            "range": {
+                "min": 0,
+                "max": false
+            },
+            "nullable": false,
+            "negative": false,
+            "infinite": false,
+            "type": "numeric",
+            "decimals": 2,
+            "preffix": false,
+            "suffix": " lb",
+            "multipliers": true,
+            "submultipliers": true
+        },
+        "Newton": {
+            "id": "DSE:0.0.0:weight:N",
+            "name": "newton",
+            "shortName": "N",
+            "description": "The newton is the SI derived unit of force. It is named after Isaac Newton in recognition of his work on classical mechanics. One newton is equal to 1 kilogram meter per second squared.",
+            "iso": "N",
+            "range": {
+                "min": 0,
+                "max": false
+            },
+            "nullable": false,
+            "negative": false,
+            "infinite": false,
+            "type": "numeric",
+            "decimals": 2,
+            "preffix": false,
+            "suffix": " N",
+            "multipliers": true,
+            "submultipliers": true
+        }
+    },
+    "converts": {
+        "Gram": {
+            "toPound": "{{_X_}} * 0.00220462",
+            "fromPound": "{{_X_}} / 0.00220462",
+            "toNewton": "{{_X_}} * 0.00980665",
+            "fromNewton": "{{_X_}} / 0.00980665"
+        },
+        "Pound": {
+            "toGram": "{{_X_}} / 0.00220462",
+            "fromGram": "{{_X_}} * 0.00220462",
+            "toNewton": "{{_X_}} * 4.44822",
+            "fromNewton": "{{_X_}} / 4.44822"
+        },
+        "Newton": {
+            "toGram": "{{_X_}} / 0.00980665",
+            "fromGram": "{{_X_}} * 0.00980665",
+            "toPound": "{{_X_}} / 4.44822",
+            "fromPound": "{{_X_}} * 4.44822"
+        }
+    }
+}

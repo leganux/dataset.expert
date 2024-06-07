@@ -1,0 +1,31 @@
+{
+  "name": "dataset-expert-engine",
+  "version": "0.0.0",
+  "description": "The global open project standar for data analyst experts",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "ts-node index.ts",
+    "dev": "nodemon"
+  },
+  "keywords": [
+    "dataset",
+    "standard",
+    "open",
+    "global",
+    "free",
+    "technology",
+    "online",
+    "leganux",
+    "dataset"
+  ],
+  "author": "Angel Erick Cruz Olivera, Leganux, Diana Laura Cruz Olivera",
+  "license": "MIT",
+  "dependencies": {
+    "ts-node": "^10.9.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.1",
+    "nodemon": "^3.1.3"
+  }
+}

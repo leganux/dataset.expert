@@ -1,0 +1,88 @@
+{
+    "name": "power",
+    "shortName": "power",
+    "id": "DSE:0.0.0:power",
+    "description": "Power is the rate at which work is done or energy is transferred or converted. Common units for measuring power include watts (W), metric horsepower (hp), and ergs per second (erg/s).",
+    "type": {
+        "Watt": {
+            "id": "DSE:0.0.0:power:W",
+            "name": "watt",
+            "shortName": "W",
+            "description": "The watt is the SI unit of power, defined as one joule per second. It is equivalent to the rate of energy transfer or conversion.",
+            "iso": "W",
+            "range": {
+                "min": 0,
+                "max": false
+            },
+            "nullable": false,
+            "negative": false,
+            "infinite": false,
+            "type": "numeric",
+            "decimals": 2,
+            "preffix": false,
+            "suffix": " W",
+            "multipliers": false,
+            "submultipliers": false
+        },
+        "MetricHorsepower": {
+            "id": "DSE:0.0.0:power:hp",
+            "name": "metric horsepower",
+            "shortName": "hp",
+            "description": "The metric horsepower is a unit of power widely used in the automotive industry and other fields. It is defined as 735.5 watts.",
+            "iso": "hp",
+            "range": {
+                "min": 0,
+                "max": false
+            },
+            "nullable": false,
+            "negative": false,
+            "infinite": false,
+            "type": "numeric",
+            "decimals": 2,
+            "preffix": false,
+            "suffix": " hp",
+            "multipliers": false,
+            "submultipliers": false
+        },
+        "ErgPerSecond": {
+            "id": "DSE:0.0.0:power:erg/s",
+            "name": "erg per second",
+            "shortName": "erg/s",
+            "description": "The erg per second is a unit of power in the CGS system of units, defined as one erg of energy transferred or converted per second.",
+            "iso": "erg/s",
+            "range": {
+                "min": 0,
+                "max": false
+            },
+            "nullable": false,
+            "negative": false,
+            "infinite": false,
+            "type": "numeric",
+            "decimals": 2,
+            "preffix": false,
+            "suffix": " erg/s",
+            "multipliers": false,
+            "submultipliers": false
+        }
+    },
+    "converts": {
+        "Watt": {
+            "toMetricHorsepower": "{{_X_}} / 735.5",
+            "fromMetricHorsepower": "{{_X_}} * 735.5",
+            "toErgPerSecond": "{{_X_}} * 10000000",
+            "fromErgPerSecond": "{{_X_}} / 10000000"
+        },
+        "MetricHorsepower": {
+            "toWatt": "{{_X_}} * 735.5",
+            "fromWatt": "{{_X_}} / 735.5",
+            "toErgPerSecond": "{{_X_}} * 7355000000",
+            "fromErgPerSecond": "{{_X_}} / 7355000000"
+        },
+        "ErgPerSecond": {
+            "toWatt": "{{_X_}} * 0.0000001",
+            "fromWatt": "{{_X_}} / 0.0000001",
+            "toMetricHorsepower": "{{_X_}} * 0.000000135962",
+            "fromMetricHorsepower": "{{_X_}} / 0.000000135962"
+        }
+    }
+}

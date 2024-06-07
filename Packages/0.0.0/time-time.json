@@ -1,0 +1,248 @@
+{
+    "name": "time",
+    "shortName": "time",
+    "id": "DSE:0.0.0:time",
+    "description": "Time is the indefinite continued progress of existence and events that occur in an irreversible succession from the past, through the present, to the future. It is typically measured in units such as seconds, minutes, hours, days, weeks, months, and years.",
+    "type": {
+        "Second": {
+            "id": "DSE:0.0.0:time:s",
+            "name": "second",
+            "shortName": "s",
+            "description": "The second is the base unit of time in the International System of Units (SI). It is defined as the duration of 9,192,631,770 periods of the radiation corresponding to the transition between the two hyperfine levels of the ground state of the cesium-133 atom.",
+            "iso": "s",
+            "range": {
+                "min": 0,
+                "max": false
+            },
+            "nullable": false,
+            "negative": false,
+            "infinite": false,
+            "type": "numeric",
+            "decimals": 2,
+            "preffix": false,
+            "suffix": " s",
+            "multipliers": true,
+            "submultipliers": true
+        },
+        "Minute": {
+            "id": "DSE:0.0.0:time:min",
+            "name": "minute",
+            "shortName": "min",
+            "description": "The minute is a unit of time equal to 60 seconds.",
+            "iso": "min",
+            "range": {
+                "min": 0,
+                "max": false
+            },
+            "nullable": false,
+            "negative": false,
+            "infinite": false,
+            "type": "numeric",
+            "decimals": 2,
+            "preffix": false,
+            "suffix": " min",
+            "multipliers": true,
+            "submultipliers": true
+        },
+        "Hour": {
+            "id": "DSE:0.0.0:time:hr",
+            "name": "hour",
+            "shortName": "hr",
+            "description": "The hour is a unit of time equal to 60 minutes or 3,600 seconds.",
+            "iso": "hr",
+            "range": {
+                "min": 0,
+                "max": false
+            },
+            "nullable": false,
+            "negative": false,
+            "infinite": false,
+            "type": "numeric",
+            "decimals": 2,
+            "preffix": false,
+            "suffix": " hr",
+            "multipliers": true,
+            "submultipliers": true
+        },
+        "Day": {
+            "id": "DSE:0.0.0:time:day",
+            "name": "day",
+            "shortName": "day",
+            "description": "The day is a unit of time defined as 24 hours or 86,400 seconds.",
+            "iso": "day",
+            "range": {
+                "min": 0,
+                "max": false
+            },
+            "nullable": false,
+            "negative": false,
+            "infinite": false,
+            "type": "numeric",
+            "decimals": 2,
+            "preffix": false,
+            "suffix": " day",
+            "multipliers": true,
+            "submultipliers": true
+        },
+        "Week": {
+            "id": "DSE:0.0.0:time:week",
+            "name": "week",
+            "shortName": "week",
+            "description": "The week is a unit of time equal to 7 days or 604,800 seconds.",
+            "iso": "week",
+            "range": {
+                "min": 0,
+                "max": false
+            },
+            "nullable": false,
+            "negative": false,
+            "infinite": false,
+            "type": "numeric",
+            "decimals": 2,
+            "preffix": false,
+            "suffix": " week",
+            "multipliers": true,
+            "submultipliers": true
+        },
+        "Month": {
+            "id": "DSE:0.0.0:time:month",
+            "name": "month",
+            "shortName": "month",
+            "description": "The month is a unit of time used in various calendars. It is approximately equal to the length of time taken by the Moon to orbit the Earth.",
+            "iso": "month",
+            "range": {
+                "min": 0,
+                "max": false
+            },
+            "nullable": false,
+            "negative": false,
+            "infinite": false,
+            "type": "numeric",
+            "decimals": 2,
+            "preffix": false,
+            "suffix": " month",
+            "multipliers": true,
+            "submultipliers": true
+        },
+        "Year": {
+            "id": "DSE:0.0.0:time:year",
+            "name": "year",
+            "shortName": "year",
+            "description": "The year is the time taken by a planet to make one complete orbit around the sun.",
+            "iso": "year",
+            "range": {
+                "min": 0,
+                "max": false
+            },
+            "nullable": false,
+            "negative": false,
+            "infinite": false,
+            "type": "numeric",
+            "decimals": 2,
+            "preffix": false,
+            "suffix": " year",
+            "multipliers": true,
+            "submultipliers": true
+        }
+    },
+    "converts": {
+        "Second": {
+            "toMinute": "{{_X_}} / 60",
+            "fromMinute": "{{_X_}} * 60",
+            "toHour": "{{_X_}} / 3600",
+            "fromHour": "{{_X_}} * 3600",
+            "toDay": "{{_X_}} / 86400",
+            "fromDay": "{{_X_}} * 86400",
+            "toWeek": "{{_X_}} / 604800",
+            "fromWeek": "{{_X_}} * 604800",
+            "toMonth": "{{_X_}} / 2592000",
+            "fromMonth": "{{_X_}} * 2592000",
+            "toYear": "{{_X_}} / 31536000",
+            "fromYear": "{{_X_}} * 31536000"
+        },
+        "Minute": {
+            "toSecond": "{{_X_}} * 60",
+            "fromSecond": "{{_X_}} / 60",
+            "toHour": "{{_X_}} / 60",
+            "fromHour": "{{_X_}} * 60",
+            "toDay": "{{_X_}} / 1440",
+            "fromDay": "{{_X_}} * 1440",
+            "toWeek": "{{_X_}} / 10080",
+            "fromWeek": "{{_X_}} * 10080",
+            "toMonth": "{{_X_}} / 43800",
+            "fromMonth": "{{_X_}} * 43800",
+            "toYear": "{{_X_}} / 525600",
+            "fromYear": "{{_X_}} * 525600"
+        },
+        "Hour": {
+            "toSecond": "{{_X_}} * 3600",
+            "fromSecond": "{{_X_}} / 3600",
+            "toMinute": "{{_X_}} * 60",
+            "fromMinute": "{{_X_}} / 60",
+            "toDay": "{{_X_}} / 24",
+            "fromDay": "{{_X_}} * 24",
+            "toWeek": "{{_X_}} / 168",
+            "fromWeek": "{{_X_}} * 168",
+            "toMonth": "{{_X_}} / 730",
+            "fromMonth": "{{_X_}} * 730",
+            "toYear": "{{_X_}} / 8760",
+            "fromYear": "{{_X_}} * 8760"
+        },
+        "Day": {
+            "toSecond": "{{_X_}} * 86400",
+            "fromSecond": "{{_X_}} / 86400",
+            "toMinute": "{{_X_}} * 1440",
+            "fromMinute": "{{_X_}} / 1440",
+            "toHour": "{{_X_}} * 24",
+            "fromHour": "{{_X_}} / 24",
+            "toWeek": "{{_X_}} / 7",
+            "fromWeek": "{{_X_}} * 7",
+            "toMonth": "{{_X_}} / 30.4368",
+            "fromMonth": "{{_X_}} * 30.4368",
+            "toYear": "{{_X_}} / 365.25",
+            "fromYear": "{{_X_}} * 365.25"
+        },
+        "Week": {
+            "toSecond": "{{_X_}} * 604800",
+            "fromSecond": "{{_X_}} / 604800",
+            "toMinute": "{{_X_}} * 10080",
+            "fromMinute": "{{_X_}} / 10080",
+            "toHour": "{{_X_}} * 168",
+            "fromHour": "{{_X_}} / 168",
+            "toDay": "{{_X_}} * 7",
+            "fromDay": "{{_X_}} / 7",
+            "toMonth": "{{_X_}} / 4.34524",
+            "fromMonth": "{{_X_}} * 4.34524",
+            "toYear": "{{_X_}} / 52.1429",
+            "fromYear": "{{_X_}} * 52.1429"
+        },
+        "Month": {
+            "toSecond": "{{_X_}} * 2592000",
+            "fromSecond": "{{_X_}} / 2592000",
+            "toMinute": "{{_X_}} * 43800",
+            "fromMinute": "{{_X_}} / 43800",
+            "toHour": "{{_X_}} * 730",
+            "fromHour": "{{_X_}} / 730",
+            "toDay": "{{_X_}} * 30.4368",
+            "fromDay": "{{_X_}} / 30.4368",
+            "toWeek": "{{_X_}} * 4.34524",
+            "fromWeek": "{{_X_}} / 4.34524",
+            "toYear": "{{_X_}} / 12",
+            "fromYear": "{{_X_}} * 12"
+        },
+        "Year": {
+            "toSecond": "{{_X_}} * 31536000",
+            "fromSecond": "{{_X_}} / 31536000",
+            "toMinute": "{{_X_}} * 525600",
+            "fromMinute": "{{_X_}} / 525600",
+            "toHour": "{{_X_}} * 8760",
+            "fromHour": "{{_X_}} / 8760",
+            "toDay": "{{_X_}} * 365.25",
+            "fromDay": "{{_X_}} / 365.25",
+            "toWeek": "{{_X_}} * 52.1429",
+            "fromWeek": "{{_X_}} / 52.1429",
+            "toMonth": "{{_X_}} * 12",
+            "fromMonth": "{{_X_}} / 12"
+        }
+    }
+}

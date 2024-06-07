@@ -1,0 +1,67 @@
+{
+    "name": "constants",
+    "shortName": "constants",
+    "id": "DSE:0.0.0:constants",
+    "description": "Defines various constants used in different fields.",
+    "type": {
+        "PI": {
+            "id": "DSE:0.0.0:constants:pi",
+            "name": "PI",
+            "shortName": "PI",
+            "description": "The mathematical constant representing the ratio of a circle's circumference to its diameter.",
+            "defaultValue": 3.141592653589793238462643383279502884197169399375105820974944,
+            "type": "numeric",
+            "nullable": false,
+            "negative": false,
+            "infinite": false
+        },
+        "Euler": {
+            "id": "DSE:0.0.0:constants:euler",
+            "name": "Euler's Number",
+            "shortName": "e",
+            "description": "The mathematical constant representing the base of the natural logarithm.",
+            "defaultValue": 2.718281828459045235360287471352662497757247093699959574966967,
+            "type": "numeric",
+            "nullable": false,
+            "negative": false,
+            "infinite": false
+        },
+        "Gravity": {
+            "id": "DSE:0.0.0:constants:gravity",
+            "name": "Gravity",
+            "shortName": "g",
+            "description": "The acceleration due to gravity on the surface of the Earth.",
+            "defaultValue": 9.80665,
+            "unit": "m/s²",
+            "type": "numeric",
+            "nullable": false,
+            "negative": false,
+            "infinite": false
+        },
+        "SpeedOfLight": {
+            "id": "DSE:0.0.0:constants:speedOfLight",
+            "name": "Speed of Light",
+            "shortName": "c",
+            "description": "The speed at which light travels in a vacuum.",
+            "defaultValue": 299792458,
+            "unit": "m/s",
+            "type": "numeric",
+            "nullable": false,
+            "negative": false,
+            "infinite": false
+        },
+        "AvogadroNumber": {
+            "id": "DSE:0.0.0:constants:avogadroNumber",
+            "name": "Avogadro's Number",
+            "shortName": "NA",
+            "description": "The number of constituent particles (usually atoms or molecules) in one mole of a given substance.",
+            "defaultValue": 6.02214076e23,
+            "unit": "mol⁻¹",
+            "type": "numeric",
+            "nullable": false,
+            "negative": false,
+            "infinite": false
+        }
+    },
+    "converts": false
+}

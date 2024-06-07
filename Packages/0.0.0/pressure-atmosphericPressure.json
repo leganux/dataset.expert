@@ -1,0 +1,87 @@
+{
+    "name": "atmosphericPressure",
+    "shortName": "pressure",
+    "id": "DSE:0.0.0:pressure",
+    "description": "Atmospheric pressure is the force exerted per unit area by the weight of air above that point. It is typically measured in units such as pascals (Pa), atmospheres (atm), or millimeters of mercury (mmHg).",
+    "type": {
+        "Pascal": {
+            "id": "DSE:0.0.0:pressure:Pa",
+            "name": "pascal",
+            "shortName": "Pa",
+            "description": "The pascal is the SI derived unit of pressure, defined as one newton per square meter. It is a measure of force per unit area.",
+            "iso": "Pa",
+            "range": {
+                "min": 0,
+                "max": false
+            },
+            "nullable": false,
+            "negative": false,
+            "infinite": true, 
+            "decimals": 2,
+            "preffix": false,
+            "suffix": " Pa",
+            "multipliers": true, 
+            "submultipliers": true 
+        },
+        "Atmosphere": {
+            "id": "DSE:0.0.0:pressure:atm",
+            "name": "atmosphere",
+            "shortName": "atm",
+            "description": "The atmosphere is a unit of pressure equal to 101,325 pascals (Pa), which is equivalent to 1.01325 bars, 760 millimeters of mercury (mmHg), or 14.6959 pounds per square inch (psi). It is commonly used to express atmospheric pressure at sea level.",
+            "iso": "atm",
+            "range": {
+                "min": 0,
+                "max": false
+            },
+            "nullable": false,
+            "negative": false,
+            "infinite": true,
+            "type": "numeric",
+            "decimals": 6,
+            "preffix": false,
+            "suffix": " atm",
+            "multipliers": true,
+            "submultipliers": true
+        },
+        "MillimeterOfMercury": {
+            "id": "DSE:0.0.0:pressure:mmHg",
+            "name": "millimeter of mercury",
+            "shortName": "mmHg",
+            "description": "The millimeter of mercury (mmHg) is a non-SI unit of pressure traditionally used for barometric pressure measurements. It is defined as the pressure exerted at the base of a column of mercury 1 millimeter (mm) high.",
+            "iso": "mmHg",
+            "range": {
+                "min": 0,
+                "max": false
+            },
+            "nullable": false,
+            "negative": false,
+            "infinite": true,
+            "type": "numeric",
+            "decimals": 2,
+            "preffix": false,
+            "suffix": " mmHg",
+            "multipliers": true,
+            "submultipliers": true
+        }
+    },
+    "converts": {
+        "Pascal": {
+            "toAtmosphere": "{{_X_}} / 101325",
+            "fromAtmosphere": "{{_X_}} * 101325",
+            "toMillimeterOfMercury": "{{_X_}} * 0.00750062",
+            "fromMillimeterOfMercury": "{{_X_}} / 0.00750062"
+        },
+        "Atmosphere": {
+            "toPascal": "{{_X_}} * 101325",
+            "fromPascal": "{{_X_}} / 101325",
+            "toMillimeterOfMercury": "{{_X_}} * 760",
+            "fromMillimeterOfMercury": "{{_X_}} / 760"
+        },
+        "MillimeterOfMercury": {
+            "toPascal": "{{_X_}} / 0.00750062",
+            "fromPascal": "{{_X_}} * 0.00750062",
+            "toAtmosphere": "{{_X_}} / 760",
+            "fromAtmosphere": "{{_X_}} * 760"
+        }
+    }
+}

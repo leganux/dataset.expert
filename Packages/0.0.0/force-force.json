@@ -1,0 +1,160 @@
+{
+    "name": "force",
+    "shortName": "force",
+    "id": "DSE:0.0.0:force",
+    "description": "Force is a vector quantity that tends to change the state of motion of an object. Common units for measuring force include newtons (N), kilonewtons (kN), pounds-force (lbf), kilograms-force (kgf), and dynes (dyn).",
+    "type": {
+        "Newton": {
+            "id": "DSE:0.0.0:force:N",
+            "name": "newton",
+            "shortName": "N",
+            "description": "The newton is the SI unit of force, defined as the force required to accelerate a one-kilogram mass by one meter per second squared.",
+            "iso": "N",
+            "range": {
+                "min": 0,
+                "max": false
+            },
+            "nullable": false,
+            "negative": false,
+            "infinite": false,
+            "type": "numeric",
+            "decimals": 2,
+            "preffix": false,
+            "suffix": " N",
+            "multipliers": true,
+            "submultipliers": true
+        },
+        "Kilonewton": {
+            "id": "DSE:0.0.0:force:kN",
+            "name": "kilonewton",
+            "shortName": "kN",
+            "description": "The kilonewton is a unit of force equal to one thousand newtons.",
+            "iso": "kN",
+            "range": {
+                "min": 0,
+                "max": false
+            },
+            "nullable": false,
+            "negative": false,
+            "infinite": false,
+            "type": "numeric",
+            "decimals": 2,
+            "preffix": false,
+            "suffix": " kN",
+            "multipliers": true,
+            "submultipliers": true
+        },
+        "PoundForce": {
+            "id": "DSE:0.0.0:force:lbf",
+            "name": "pound-force",
+            "shortName": "lbf",
+            "description": "The pound-force is a unit of force in some systems of measurement, including the British engineering system and the gravitational metric system.",
+            "iso": "lbf",
+            "range": {
+                "min": 0,
+                "max": false
+            },
+            "nullable": false,
+            "negative": false,
+            "infinite": false,
+            "type": "numeric",
+            "decimals": 2,
+            "preffix": false,
+            "suffix": " lbf",
+            "multipliers": true,
+            "submultipliers": true
+        },
+        "KilogramForce": {
+            "id": "DSE:0.0.0:force:kgf",
+            "name": "kilogram-force",
+            "shortName": "kgf",
+            "description": "The kilogram-force is a unit of force that exerts on one kilogram of mass under standard Earth gravity.",
+            "iso": "kgf",
+            "range": {
+                "min": 0,
+                "max": false
+            },
+            "nullable": false,
+            "negative": false,
+            "infinite": false,
+            "type": "numeric",
+            "decimals": 2,
+            "preffix": false,
+            "suffix": " kgf",
+            "multipliers": true,
+            "submultipliers": true
+        },
+        "Dyne": {
+            "id": "DSE:0.0.0:force:dyn",
+            "name": "dyne",
+            "shortName": "dyn",
+            "description": "The dyne is a unit of force in the centimeter-gram-second (CGS) system of units, defined as the force required to accelerate a one-gram mass by one centimeter per second squared.",
+            "iso": "dyn",
+            "range": {
+                "min": 0,
+                "max": false
+            },
+            "nullable": false,
+            "negative": false,
+            "infinite": false,
+            "type": "numeric",
+            "decimals": 2,
+            "preffix": false,
+            "suffix": " dyn",
+            "multipliers": true,
+            "submultipliers": true
+        }
+    },
+    "converts": {
+        "Newton": {
+            "toKilonewton": "{{_X_}} / 1000",
+            "fromKilonewton": "{{_X_}} * 1000",
+            "toPoundForce": "{{_X_}} * 0.224809",
+            "fromPoundForce": "{{_X_}} / 0.224809",
+            "toKilogramForce": "{{_X_}} * 0.101972",
+            "fromKilogramForce": "{{_X_}} / 0.101972",
+            "toDyne": "{{_X_}} * 100000",
+            "fromDyne": "{{_X_}} / 100000"
+        },
+        "Kilonewton": {
+            "toNewton": "{{_X_}} * 1000",
+            "fromNewton": "{{_X_}} / 1000",
+            "toPoundForce": "{{_X_}} * 224.809",
+            "fromPoundForce": "{{_X_}} / 224.809",
+            "toKilogramForce": "{{_X_}} * 101.972",
+            "fromKilogramForce": "{{_X_}} / 101.972",
+            "toDyne": "{{_X_}} * 100000000",
+            "fromDyne": "{{_X_}} / 100000000"
+        },
+        "PoundForce": {
+            "toNewton": "{{_X_}} * 4.44822",
+            "fromNewton": "{{_X_}} / 4.44822",
+            "toKilonewton": "{{_X_}} * 0.00444822",
+            "fromKilonewton": "{{_X_}} / 0.00444822",
+            "toKilogramForce": "{{_X_}} * 0.453592",
+            "fromKilogramForce": "{{_X_}} / 0.453592",
+            "toDyne": "{{_X_}} * 444822.161",
+            "fromDyne": "{{_X_}} / 444822.161"
+        },
+        "KilogramForce": {
+            "toNewton": "{{_X_}} * 9.80665",
+            "fromNewton": "{{_X_}} / 9.80665",
+            "toKilonewton": "{{_X_}} * 0.00980665",
+            "fromKilonewton": "{{_X_}} / 0.00980665",
+            "toPoundForce": "{{_X_}} * 2.20462",
+            "fromPoundForce": "{{_X_}} / 2.20462",
+            "toDyne": "{{_X_}} * 980665",
+            "fromDyne": "{{_X_}} / 980665"
+        },
+        "Dyne": {
+            "toNewton": "{{_X_}} * 0.00001",
+            "fromNewton": "{{_X_}} / 0.00001",
+            "toKilonewton": "{{_X_}} * 1e-8",
+            "fromKilonewton": "{{_X_}} / 1e-8",
+            "toPoundForce": "{{_X_}} * 0.00000224809",
+            "fromPoundForce": "{{_X_}} / 0.00000224809",
+            "toKilogramForce": "{{_X_}} * 1.01972e-6",
+            "fromKilogramForce": "{{_X_}} / 1.01972e-6"
+        }
+    }
+}

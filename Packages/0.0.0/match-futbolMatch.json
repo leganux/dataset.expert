@@ -1,0 +1,149 @@
+{
+    "name": "futbolMatch",
+    "shortName": "match",
+    "id": "DSE:0.0.0:match",
+    "description": "Here we define values that happen in a football match",
+    "type": {
+        "Goals": {
+            "id": "DSE:0.0.0:match:goals",
+            "name": "Goals",
+            "shortName": "goals",
+            "description": "The number of goals that appear at the end of a football match",
+            "iso": "goal",
+            "range": {
+                "min": 0,
+                "max": 100
+            },
+            "nullable": false,
+            "negative": false,
+            "infinite": false,
+            "type": "numeric",
+            "decimals": 0,
+            "prefix": false,
+            "suffix": " goals",
+            "multipliers": false,
+            "submultipliers": false
+        },
+        "Players": {
+            "id": "DSE:0.0.0:match:players",
+            "name": "Players",
+            "shortName": "players",
+            "description": "The number of players who can simultaneously play a football match",
+            "iso": "player",
+            "range": {
+                "min": 0,
+                "max": 22
+            },
+            "nullable": false,
+            "negative": false,
+            "infinite": false,
+            "type": "numeric",
+            "decimals": 0,
+            "prefix": false,
+            "suffix": " players",
+            "multipliers": false,
+            "submultipliers": false
+        },
+        "ShotsOnGoal": {
+            "id": "DSE:0.0.0:match:shotsOnGoal",
+            "name": "Shots on Goal",
+            "shortName": "shots",
+            "description": "The number of shots on goal during a football match",
+            "iso": "shot",
+            "range": {
+                "min": 0,
+                "max": 100
+            },
+            "nullable": false,
+            "negative": false,
+            "infinite": false,
+            "type": "numeric",
+            "decimals": 0,
+            "prefix": false,
+            "suffix": " shots",
+            "multipliers": false,
+            "submultipliers": false
+        },
+        "Corners": {
+            "id": "DSE:0.0.0:match:corners",
+            "name": "Corners",
+            "shortName": "corners",
+            "description": "The number of corners awarded during a football match",
+            "iso": "corner",
+            "range": {
+                "min": 0,
+                "max": 100
+            },
+            "nullable": false,
+            "negative": false,
+            "infinite": false,
+            "type": "numeric",
+            "decimals": 0,
+            "prefix": false,
+            "suffix": " corners",
+            "multipliers": false,
+            "submultipliers": false
+        },
+        "YellowCards": {
+            "id": "DSE:0.0.0:match:yellowCards",
+            "name": "Yellow Cards",
+            "shortName": "yellow cards",
+            "description": "The number of yellow cards shown during a football match",
+            "iso": "yellowCard",
+            "range": {
+                "min": 0,
+                "max": 100
+            },
+            "nullable": false,
+            "negative": false,
+            "infinite": false,
+            "type": "numeric",
+            "decimals": 0,
+            "prefix": false,
+            "suffix": " yellow cards",
+            "multipliers": false,
+            "submultipliers": false
+        },
+        "RedCards": {
+            "id": "DSE:0.0.0:match:redCards",
+            "name": "Red Cards",
+            "shortName": "red cards",
+            "description": "The number of red cards shown during a football match",
+            "iso": "redCard",
+            "range": {
+                "min": 0,
+                "max": 100
+            },
+            "nullable": false,
+            "negative": false,
+            "infinite": false,
+            "type": "numeric",
+            "decimals": 0,
+            "prefix": false,
+            "suffix": " red cards",
+            "multipliers": false,
+            "submultipliers": false
+        },
+        "TotalCards": {
+            "id": "DSE:0.0.0:match:totalCards",
+            "name": "Total Cards",
+            "shortName": "total cards",
+            "description": "The total number of cards (yellow + red) shown during a football match",
+            "iso": "card",
+            "range": {
+                "min": 0,
+                "max": 200
+            },
+            "nullable": false,
+            "negative": false,
+            "infinite": false,
+            "type": "numeric",
+            "decimals": 0,
+            "prefix": false,
+            "suffix": " cards",
+            "multipliers": false,
+            "submultipliers": false
+        }
+    },
+    "converts": false
+}

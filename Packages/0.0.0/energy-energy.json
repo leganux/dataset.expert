@@ -1,0 +1,202 @@
+{
+    "name": "energy",
+    "shortName": "energy",
+    "id": "DSE:0.0.0:energy",
+    "description": "Energy is the ability to do work, measured in units such as joules (J), kilojoules (kJ), calories (cal), kilocalories (kcal), electronvolts (eV), and kilowatt-hours (kWh).",
+    "type": {
+        "Joule": {
+            "id": "DSE:0.0.0:energy:J",
+            "name": "joule",
+            "shortName": "J",
+            "description": "The joule is the SI unit of energy, equivalent to the energy transferred or expended in one second by one watt of power.",
+            "iso": "J",
+            "range": {
+                "min": 0,
+                "max": false
+            },
+            "nullable": false,
+            "negative": false,
+            "infinite": false,
+            "type": "numeric",
+            "decimals": 2,
+            "preffix": false,
+            "suffix": " J",
+            "multipliers": true,
+            "submultipliers": true
+        },
+        "Kilojoule": {
+            "id": "DSE:0.0.0:energy:kJ",
+            "name": "kilojoule",
+            "shortName": "kJ",
+            "description": "The kilojoule is a unit of energy equal to one thousand joules.",
+            "iso": "kJ",
+            "range": {
+                "min": 0,
+                "max": false
+            },
+            "nullable": false,
+            "negative": false,
+            "infinite": false,
+            "type": "numeric",
+            "decimals": 2,
+            "preffix": false,
+            "suffix": " kJ",
+            "multipliers": true,
+            "submultipliers": true
+        },
+        "Calorie": {
+            "id": "DSE:0.0.0:energy:cal",
+            "name": "calorie",
+            "shortName": "cal",
+            "description": "The calorie is a unit of energy commonly used in the field of chemistry and nutrition. It is defined as the amount of heat required to raise the temperature of one gram of water by one degree Celsius.",
+            "iso": "cal",
+            "range": {
+                "min": 0,
+                "max": false
+            },
+            "nullable": false,
+            "negative": false,
+            "infinite": false,
+            "type": "numeric",
+            "decimals": 2,
+            "preffix": false,
+            "suffix": " cal",
+            "multipliers": true,
+            "submultipliers": true
+        },
+        "Kilocalorie": {
+            "id": "DSE:0.0.0:energy:kcal",
+            "name": "kilocalorie",
+            "shortName": "kcal",
+            "description": "The kilocalorie is a unit of energy commonly used in nutrition, equal to one thousand calories.",
+            "iso": "kcal",
+            "range": {
+                "min": 0,
+                "max": false
+            },
+            "nullable": false,
+            "negative": false,
+            "infinite": false,
+            "type": "numeric",
+            "decimals": 2,
+            "preffix": false,
+            "suffix": " kcal",
+            "multipliers": true,
+            "submultipliers": true
+        },
+        "Electronvolt": {
+            "id": "DSE:0.0.0:energy:eV",
+            "name": "electronvolt",
+            "shortName": "eV",
+            "description": "The electronvolt is a unit of energy equal to approximately 1.602 x 10^-19 joules. It is commonly used in atomic and nuclear physics.",
+            "iso": "eV",
+            "range": {
+                "min": 0,
+                "max": false
+            },
+            "nullable": false,
+            "negative": false,
+            "infinite": false,
+            "type": "numeric",
+            "decimals": 2,
+            "preffix": false,
+            "suffix": " eV",
+            "multipliers": true,
+            "submultipliers": true
+        },
+        "KilowattHour": {
+            "id": "DSE:0.0.0:energy:kWh",
+            "name": "kilowatt-hour",
+            "shortName": "kWh",
+            "description": "The kilowatt-hour is a unit of energy equivalent to one kilowatt (1 kW) of power expended for one hour. It is commonly used as a billing unit for energy delivered to consumers by electric utilities.",
+            "iso": "kWh",
+            "range": {
+                "min": 0,
+                "max": false
+            },
+            "nullable": false,
+            "negative": false,
+            "infinite": false,
+            "type": "numeric",
+            "decimals": 2,
+            "preffix": false,
+            "suffix": " kWh",
+            "multipliers": true,
+            "submultipliers": true
+        }
+    },
+    "converts": {
+        "Joule": {
+            "toKilojoule": "{{_X_}} / 1000",
+            "fromKilojoule": "{{_X_}} * 1000",
+            "toCalorie": "{{_X_}} / 4.184",
+            "fromCalorie": "{{_X_}} * 4.184",
+            "toKilocalorie": "{{_X_}} / 4184",
+            "fromKilocalorie": "{{_X_}} * 4184",
+            "toElectronvolt": "{{_X_}} * 6.242e+18",
+            "fromElectronvolt": "{{_X_}} / 6.242e+18",
+            "toKilowattHour": "{{_X_}} / 3600000",
+            "fromKilowattHour": "{{_X_}} * 3600000"
+        },
+        "Kilojoule": {
+            "toJoule": "{{_X_}} * 1000",
+            "fromJoule": "{{_X_}} / 1000",
+            "toCalorie": "{{_X_}} / 0.004184",
+            "fromCalorie": "{{_X_}} * 0.004184",
+            "toKilocalorie": "{{_X_}} / 4.184",
+            "fromKilocalorie": "{{_X_}} * 4.184",
+            "toElectronvolt": "{{_X_}} *6.242e+21",
+            "fromElectronvolt": "{{_X_}} / 6.242e+21",
+            "toKilowattHour": "{{_X_}} / 3.6e+6",
+            "fromKilowattHour": "{{_X_}} * 3.6e+6"
+        },
+        "Calorie": {
+            "toJoule": "{{_X_}} * 4.184",
+            "fromJoule": "{{_X_}} / 4.184",
+            "toKilojoule": "{{_X_}} / 0.004184",
+            "fromKilojoule": "{{_X_}} * 0.004184",
+            "toKilocalorie": "{{_X_}} / 1000",
+            "fromKilocalorie": "{{_X_}} * 1000",
+            "toElectronvolt": "{{_X_}} * 2.388e+22",
+            "fromElectronvolt": "{{_X_}} / 2.388e+22",
+            "toKilowattHour": "{{_X_}} / 860.421",
+            "fromKilowattHour": "{{_X_}} * 860.421"
+        },
+        "Kilocalorie": {
+            "toJoule": "{{_X_}} * 4184",
+            "fromJoule": "{{_X_}} / 4184",
+            "toKilojoule": "{{_X_}} / 4.184",
+            "fromKilojoule": "{{_X_}} * 4.184",
+            "toCalorie": "{{_X_}} * 1000",
+            "fromCalorie": "{{_X_}} / 1000",
+            "toElectronvolt": "{{_X_}} * 2.388e+25",
+            "fromElectronvolt": "{{_X_}} / 2.388e+25",
+            "toKilowattHour": "{{_X_}} / 860.421",
+            "fromKilowattHour": "{{_X_}} * 860.421"
+        },
+        "Electronvolt": {
+            "toJoule": "{{_X_}} * 1.602e-19",
+            "fromJoule": "{{_X_}} / 1.602e-19",
+            "toKilojoule": "{{_X_}} * 6.242e-22",
+            "fromKilojoule": "{{_X_}} / 6.242e-22",
+            "toCalorie": "{{_X_}} * 4.187e-12",
+            "fromCalorie": "{{_X_}} / 4.187e-12",
+            "toKilocalorie": "{{_X_}} * 4.187e-15",
+            "fromKilocalorie": "{{_X_}} / 4.187e-15",
+            "toKilowattHour": "{{_X_}} * 4.45e-23",
+            "fromKilowattHour": "{{_X_}} / 4.45e-23"
+        },
+        "KilowattHour": {
+            "toJoule": "{{_X_}} * 3.6e+6",
+            "fromJoule": "{{_X_}} / 3.6e+6",
+            "toKilojoule": "{{_X_}} * 3600",
+            "fromKilojoule": "{{_X_}} / 3600",
+            "toCalorie": "{{_X_}} * 860.421",
+            "fromCalorie": "{{_X_}} / 860.421",
+            "toKilocalorie": "{{_X_}} / 860.421",
+            "fromKilocalorie": "{{_X_}} * 860.421",
+            "toElectronvolt": "{{_X_}} * 2.246e+22",
+            "fromElectronvolt": "{{_X_}} / 2.246e+22"
+        }
+    }
+}

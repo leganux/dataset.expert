@@ -1,0 +1,69 @@
+{
+    "name": "population",
+    "shortName": "population",
+    "id": "DSE:0.0.0:population",
+    "description": "Defines the population of a specific area.",
+    "type": {
+        "Persons": {
+            "id": "DSE:0.0.0:population:persons",
+            "name": "Total Population",
+            "shortName": "persons",
+            "description": "The total number of individuals residing in the area.",
+            "iso": "persons",
+            "range": {
+                "min": 0,
+                "max": false
+            },
+            "nullable": false,
+            "negative": false,
+            "infinite": true,
+            "type": "numeric",
+            "decimals": 0,
+            "prefix": false,
+            "suffix": " persons",
+            "multipliers": false,
+            "submultipliers": false
+        },
+        "Male": {
+            "id": "DSE:0.0.0:population:male",
+            "name": "Male Population",
+            "shortName": "male",
+            "description": "The number of male individuals in the area.",
+            "iso": "male",
+            "range": {
+                "min": 0,
+                "max": 1000000000
+            },
+            "nullable": false,
+            "negative": false,
+            "infinite": false,
+            "type": "numeric",
+            "decimals": 0,
+            "prefix": false,
+            "suffix": " males",
+            "multipliers": false,
+            "submultipliers": false
+        },
+        "Female": {
+            "id": "DSE:0.0.0:population:female",
+            "name": "Female Population",
+            "shortName": "female",
+            "description": "The number of female individuals in the area.",
+            "iso": "female",
+            "range": {
+                "min": 0,
+                "max": 1000000000
+            },
+            "nullable": false,
+            "negative": false,
+            "infinite": false,
+            "type": "numeric",
+            "decimals": 0,
+            "prefix": false,
+            "suffix": " females",
+            "multipliers": false,
+            "submultipliers": false
+        }
+    },
+    "converts": false
+}

@@ -1,0 +1,88 @@
+{
+    "name": "volume",
+    "shortName": "volume",
+    "id": "DSE:0.0.0:volume",
+    "description": "Volume is the quantity of three-dimensional space enclosed by a closed surface. It is typically measured in units such as liters (L), cubic meters (m^3), or cubic feet (ft^3).",
+    "type": {
+        "Liter": {
+            "id": "DSE:0.0.0:volume:L",
+            "name": "liter",
+            "shortName": "L",
+            "description": "The liter is a metric unit of volume equal to one cubic decimeter (dm^3). It is the base unit of volume in the International System of Units (SI).",
+            "iso": "L",
+            "range": {
+                "min": 0,
+                "max": false
+            },
+            "nullable": false,
+            "negative": false,
+            "infinite": false,
+            "type": "numeric",
+            "decimals": 2,
+            "preffix": false,
+            "suffix": " L",
+            "multipliers": true,
+            "submultipliers": true
+        },
+        "CubicMeter": {
+            "id": "DSE:0.0.0:volume:m^3",
+            "name": "cubic meter",
+            "shortName": "m^3",
+            "description": "The cubic meter is the SI derived unit of volume. It is the volume of a cube with edges one meter in length. It is the base unit of volume in the International System of Units (SI).",
+            "iso": "m^3",
+            "range": {
+                "min": 0,
+                "max": false
+            },
+            "nullable": false,
+            "negative": false,
+            "infinite": false,
+            "type": "numeric",
+            "decimals": 2,
+            "preffix": false,
+            "suffix": " m^3",
+            "multipliers": true,
+            "submultipliers": true
+        },
+        "CubicFoot": {
+            "id": "DSE:0.0.0:volume:ft^3",
+            "name": "cubic foot",
+            "shortName": "ft^3",
+            "description": "The cubic foot is a unit of volume in the imperial and US customary systems of measurement. It is defined as the volume of a cube with sides of one foot (0.3048 meters) in length.",
+            "iso": "ft^3",
+            "range": {
+                "min": 0,
+                "max": false
+            },
+            "nullable": false,
+            "negative": false,
+            "infinite": false,
+            "type": "numeric",
+            "decimals": 2,
+            "preffix": false,
+            "suffix": " ft^3",
+            "multipliers": true,
+            "submultipliers": true
+        }
+    },
+    "converts": {
+        "Liter": {
+            "toCubicMeter": "{{_X_}} * 0.001",
+            "fromCubicMeter": "{{_X_}} / 0.001",
+            "toCubicFoot": "{{_X_}} * 0.0353147",
+            "fromCubicFoot": "{{_X_}} / 0.0353147"
+        },
+        "CubicMeter": {
+            "toLiter": "{{_X_}} * 1000",
+            "fromLiter": "{{_X_}} / 1000",
+            "toCubicFoot": "{{_X_}} * 35.3147",
+            "fromCubicFoot": "{{_X_}} / 35.3147"
+        },
+        "CubicFoot": {
+            "toLiter": "{{_X_}} * 28.3168",
+            "fromLiter": "{{_X_}} / 28.3168",
+            "toCubicMeter": "{{_X_}} * 0.0283168",
+            "fromCubicMeter": "{{_X_}} / 0.0283168"
+        }
+    }
+}

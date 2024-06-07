@@ -1,0 +1,160 @@
+{
+    "name": "length",
+    "shortName": "length",
+    "id": "DSE:0.0.0:length",
+    "description": "Length is a measure of distance between two points. It is typically measured in units such as meters (m), inches (in), feet (ft), yards (yd), and miles (mi).",
+    "type": {
+        "Meter": {
+            "id": "DSE:0.0.0:length:m",
+            "name": "meter",
+            "shortName": "m",
+            "description": "The meter is the base unit of length in the International System of Units (SI). It is defined as the distance traveled by light in a vacuum in 1/299,792,458 of a second.",
+            "iso": "m",
+            "range": {
+                "min": 0,
+                "max": false
+            },
+            "nullable": false,
+            "negative": false,
+            "infinite": false,
+            "type": "numeric",
+            "decimals": 2,
+            "preffix": false,
+            "suffix": " m",
+            "multipliers": true,
+            "submultipliers": false
+        },
+        "Inch": {
+            "id": "DSE:0.0.0:length:in",
+            "name": "inch",
+            "shortName": "in",
+            "description": "The inch is a unit of length equal to 1/12 of a foot or 2.54 centimeters.",
+            "iso": "in",
+            "range": {
+                "min": 0,
+                "max": false
+            },
+            "nullable": false,
+            "negative": false,
+            "infinite": false,
+            "type": "numeric",
+            "decimals": 2,
+            "preffix": false,
+            "suffix": " in",
+            "multipliers": true,
+            "submultipliers": false
+        },
+        "Foot": {
+            "id": "DSE:0.0.0:length:ft",
+            "name": "foot",
+            "shortName": "ft",
+            "description": "The foot is a unit of length equal to 12 inches or 0.3048 meters.",
+            "iso": "ft",
+            "range": {
+                "min": 0,
+                "max": false
+            },
+            "nullable": false,
+            "negative": false,
+            "infinite": false,
+            "type": "numeric",
+            "decimals": 2,
+            "preffix": false,
+            "suffix": " ft",
+            "multipliers": true,
+            "submultipliers": false
+        },
+        "Yard": {
+            "id": "DSE:0.0.0:length:yd",
+            "name": "yard",
+            "shortName": "yd",
+            "description": "The yard is a unit of length equal to 3 feet or 0.9144 meters.",
+            "iso": "yd",
+            "range": {
+                "min": 0,
+                "max": false
+            },
+            "nullable": false,
+            "negative": false,
+            "infinite": false,
+            "type": "numeric",
+            "decimals": 2,
+            "preffix": false,
+            "suffix": " yd",
+            "multipliers": true,
+            "submultipliers": false
+        },
+        "Mile": {
+            "id": "DSE:0.0.0:length:mi",
+            "name": "mile",
+            "shortName": "mi",
+            "description": "The mile is a unit of length equal to 5,280 feet or 1,609.34 meters.",
+            "iso": "mi",
+            "range": {
+                "min": 0,
+                "max": false
+            },
+            "nullable": false,
+            "negative": false,
+            "infinite": false,
+            "type": "numeric",
+            "decimals": 2,
+            "preffix": false,
+            "suffix": " mi",
+            "multipliers": true,
+            "submultipliers": false
+        }
+    },
+    "converts": {
+        "Meter": {
+            "toInch": "{{_X_}} * 39.3701",
+            "fromInch": "{{_X_}} / 39.3701",
+            "toFoot": "{{_X_}} * 3.28084",
+            "fromFoot": "{{_X_}} / 3.28084",
+            "toYard": "{{_X_}} * 1.09361",
+            "fromYard": "{{_X_}} / 1.09361",
+            "toMile": "{{_X_}} / 1609.34",
+            "fromMile": "{{_X_}} * 1609.34"
+        },
+        "Inch": {
+            "toMeter": "{{_X_}} / 39.3701",
+            "fromMeter": "{{_X_}} * 39.3701",
+            "toFoot": "{{_X_}} / 12",
+            "fromFoot": "{{_X_}} * 12",
+            "toYard": "{{_X_}} / 36",
+            "fromYard": "{{_X_}} * 36",
+            "toMile": "{{_X_}} / 63360",
+            "fromMile": "{{_X_}} * 63360"
+        },
+        "Foot": {
+            "toMeter": "{{_X_}} / 3.28084",
+            "fromMeter": "{{_X_}} * 3.28084",
+            "toInch": "{{_X_}} * 12",
+            "fromInch": "{{_X_}} / 12",
+            "toYard": "{{_X_}} / 3",
+            "fromYard": "{{_X_}} * 3",
+            "toMile": "{{_X_}} / 5280",
+            "fromMile": "{{_X_}} * 5280"
+        },
+        "Yard": {
+            "toMeter": "{{_X_}} / 1.09361",
+            "fromMeter": "{{_X_}} * 1.09361",
+            "toInch": "{{_X_}} * 36",
+            "fromInch": "{{_X_}} / 36",
+            "toFoot": "{{_X_}} * 3",
+            "fromFoot": "{{_X_}} / 3",
+            "toMile": "{{_X_}} / 1760",
+            "fromMile": "{{_X_}} * 1760"
+        },
+        "Mile": {
+            "toMeter": "{{_X_}} * 1609.34",
+            "fromMeter": "{{_X_}} / 1609.34",
+            "toInch": "{{_X_}} * 63360",
+            "fromInch": "{{_X_}} / 63360",
+            "toFoot": "{{_X_}} * 5280",
+            "fromFoot": "{{_X_}} / 5280",
+            "toYard": "{{_X_}} * 1760",
+            "fromYard": "{{_X_}} / 1760"
+        }
+    }
+}
